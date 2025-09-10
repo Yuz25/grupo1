@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jonathan Briceño</title>
   <style>
-    /* Reset básico */
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Fondo con degradado */
+    
     body {
       display: flex;
       align-items: center;
@@ -22,7 +22,7 @@
       font-family: 'Segoe UI', Tahoma, sans-serif;
     }
 
-    /* Contenedor principal */
+    
     .container {
       text-align: center;
       padding: 2rem 3rem;
@@ -32,7 +32,7 @@
       max-width: 360px;
     }
 
-    /* Entrada oculta */
+    
     #title,
     #profile-pic {
       opacity: 0;
@@ -40,14 +40,14 @@
       transition: all 0.8s ease;
     }
 
-    /* Título */
+    
     #title {
       color: #333;
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
     }
 
-    /* Tarjeta de imagen */
+    
     .card {
       display: inline-block;
       overflow: hidden;
@@ -55,7 +55,7 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Imagen de perfil */
+    
     #profile-pic {
       display: block;
       width: 100%;
@@ -70,7 +70,6 @@
       transform: translateY(-5px) scale(1.05);
     }
 
-    /* Botón personalizado */
     #animate-btn {
       padding: 0.75rem 1.5rem;
       background: #66a6ff;
@@ -87,7 +86,6 @@
       transform: translateY(-2px);
     }
 
-    /* Animación de giro */
     .rotating {
       animation: spin 1s ease-in-out forwards;
     }
@@ -118,7 +116,6 @@
       const profilePic = document.getElementById('profile-pic');
       const btn        = document.getElementById('animate-btn');
 
-      // Animación de entrada
       requestAnimationFrame(() => {
         title.style.opacity = '1';
         title.style.transform = 'translateY(0) scale(1)';
@@ -126,7 +123,6 @@
         profilePic.style.transform = 'translateY(0) scale(1)';
       });
 
-      // Giro al clicar el botón
       btn.addEventListener('click', () => {
         profilePic.classList.add('rotating');
         profilePic.addEventListener('animationend', () => {
@@ -134,7 +130,6 @@
         }, { once: true });
       });
 
-      // También gira al clicar la imagen
       profilePic.addEventListener('click', () => btn.click());
     });
   </script>
